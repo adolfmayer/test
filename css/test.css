@@ -126,6 +126,7 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  font: 14px/24px 'Source Code Pro';
 }
 
 /*
@@ -178,31 +179,61 @@ header {
 
 .container {
   display: flex;
-  gap: 3%;        
-  max-width: 960px; 
-  margin: auto;
-}
-
-.container > section {
-  flex: 1;
-  min-width: 0;
-}
-
-.container,
-header,
-aside,
-footer {
-  margin: 0 1.5% 24px 1.5%;
+  justify-content: center;
+  gap: 3%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .container img {
-  max-width: 33.33vw;
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  display: block;
   border-radius: 50%;
+}
+
+.role{
+  justify-content: flex-start;
 }
 
 footer {
   margin-bottom: 0;
+}
+
+/*
+  ========================================
+  Table
+  ========================================
+*/
+
+table {
+  border-collapse: collapse;
+  color: #ffffff;
+  text-align: center;
+}
+
+tfoot tr:last-child td {
+  border-bottom: 0;
+}
+
+th,
+td {
+  border: 1px solid #ffffff;
+  padding: 10px 15px;
+}
+
+th {
+  background-color: #db2ba0;
+}
+tbody tr:nth-child(even) {
+  background: #292929;
+}
+
+/*
+  ========================================
+  Dropdown
+  ========================================
+*/
+
+select {
+  font: 14px/24px 'Source Code Pro';
 }

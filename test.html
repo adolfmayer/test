@@ -2,37 +2,74 @@
 <html>
   <head>
     <title>frostko</title>
-    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="css/test.css" />
   </head>
 
   <body>
     <header>
       <a href="test.html">
         <img
-        src="https://i.ibb.co/Vct10pW8/logo.png"
-        alt="Frostko logo"
-        loading="lazy"
+          src="https://i.ibb.co/Vct10pW8/logo.png"
+          alt="Frostko logo"
+          loading="lazy"
+        />
       </a>
     </header>
+
+    <div class="role">
+      <label>
+        Number of Passes
+        <select name="quantity" required>
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </label>
+    </div>
 
     <div class="container">
       <section>
         <img
-        src="https://cmonjapan.shop/cdn/shop/articles/Drifter_1000x.jpg?v=1710133500"
-        alt="Drifter"
-        loading="lazy"
+          src="https://cmonjapan.shop/cdn/shop/articles/Drifter_1000x.jpg?v=1710133500"
+          alt="Drifter"
+          loading="lazy"
+        />
       </section>
       <section>
-        <p>SECTION2</p>
-      </section>
-      <section>
-        <p>SECTION3</p>
+        <table>
+          <tr>
+            <td>Level</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>XP</td>
+            <td>0</td>
+            <td>45</td>
+            <td>95</td>
+            <td>150</td>
+            <td>210</td>
+            <td>275</td>
+            <td>345</td>
+            <td>420</td>
+            <td>500</td>
+          </tr>
+        </table>
       </section>
     </div>
 
     <footer>
       <p>FOOTER</p>
     </footer>
-    
+    <script src="js/main.js"></script>
   </body>
 </html>
