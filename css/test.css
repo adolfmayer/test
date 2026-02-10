@@ -135,13 +135,21 @@ table {
   ========================================
 */
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
-  background-color: rgb(0, 0, 0);
+  background: linear-gradient(black, #0d1c2e, #193c52);
 }
 
 p {
-  background: #2db34a;
+  background: black;
   border-radius: 6px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
   color: #fff;
   display: block;
   width: 100%;
@@ -177,6 +185,11 @@ header {
   justify-content: center;
 }
 
+header img {
+  max-width: 35%;
+  margin-top: 2%;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -191,8 +204,10 @@ header {
   border-radius: 50%;
 }
 
-.role{
+.role {
+  display: flex;
   justify-content: flex-start;
+  margin-bottom: 1%;
 }
 
 footer {
@@ -236,4 +251,8 @@ tbody tr:nth-child(even) {
 
 select {
   font: 14px/24px 'Source Code Pro';
+  background-color: black;
+  color: white;
 }
+
+
