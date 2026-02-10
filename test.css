@@ -1,28 +1,208 @@
-code {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+p {
   background: #2db34a;
   border-radius: 6px;
   color: #fff;
   display: block;
-  font: 14px/24px 'Source Code Pro', Inconsolata, 'Lucida Console', Terminal,
-    'Courier New', Courier;
+  width: 100%;
+  box-sizing: border-box;
+  font:
+    14px/24px 'Source Code Pro',
+    Inconsolata,
+    'Lucida Console',
+    Terminal,
+    'Courier New',
+    Courier;
   padding: 24px 15px;
   text-align: center;
+  margin-right: 10px;
 }
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 3%;        
+  max-width: 960px; 
+  margin: auto;
+}
+
+.container > section {
+  flex: 1;
+  min-width: 0;
+}
+
+.container,
 header,
-section,
 aside,
 footer {
   margin: 0 1.5% 24px 1.5%;
 }
-section {
-  float: left;
-  width: 63%;
+
+.container img {
+  max-width: 33.33vw;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
 }
-aside {
-  float: right;
-  width: 30%;
-}
+
 footer {
-    clear: both;
   margin-bottom: 0;
 }
