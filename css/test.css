@@ -135,13 +135,14 @@ table {
   ========================================
 */
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
 body {
-  background: linear-gradient(black, #0d1c2e, #193c52);
+  background: linear-gradient(black, #313d5c);
 }
 
 p {
@@ -223,29 +224,21 @@ footer {
 table {
   border-collapse: collapse;
   color: #ffffff;
-  text-align: center;
+  text-align: center; 
 }
 
-tfoot tr:last-child td {
-  border-bottom: 0;
-}
-
-th,
 td {
   border: 1px solid #ffffff;
   padding: 10px 15px;
 }
 
-th {
-  background-color: #db2ba0;
-}
 tbody tr:nth-child(even) {
   background: #292929;
 }
 
 /*
   ========================================
-  Dropdown
+  Dropdown Radio Textarea
   ========================================
 */
 
@@ -255,4 +248,17 @@ select {
   color: white;
 }
 
+.radio-level{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 18px;
+}
 
+.radio-level label:nth-child(1),
+.radio-level label:nth-child(2) {
+  margin-right: 23px;
+}
+
+.radio-level label:nth-child(n+3):nth-child(-n+8) {
+  margin-right: 35px;
+}
