@@ -141,9 +141,22 @@ body {
   margin: 0;
 }
 
-body {
+body[data-page="index"] {
   background: linear-gradient(black, #313d5c);
 }
+
+body[data-page="krab"] {
+  background: linear-gradient(black, #926385);
+}
+
+body[data-page="meteor"] {
+  background: linear-gradient(black, #801818);
+}
+
+body[data-page="stin"] {
+  background: linear-gradient(black, #4b4b4b);
+}
+
 
 p {
   color: #fff;
