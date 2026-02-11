@@ -193,10 +193,10 @@ header img {
 
 .container {
   display: flex;
-  justify-content: center;
-  gap: 3%;
+  gap: 2%;
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 2% 0 2%;
 }
 
 .avatar img {
