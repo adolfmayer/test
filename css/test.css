@@ -146,25 +146,9 @@ body {
 }
 
 p {
-  background: black;
-  border-radius: 6px;
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
   color: #fff;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  font:
-    14px/24px 'Source Code Pro',
-    Inconsolata,
-    'Lucida Console',
-    Terminal,
-    'Courier New',
-    Courier;
-  padding: 24px 15px;
-  text-align: center;
-  margin-right: 10px;
+  font: 14px/24px 'Source Code Pro';
+  padding: 2% 2% 2% 0;
 }
 
 /*
@@ -248,22 +232,28 @@ td.selected:nth-child(n + 2):nth-child(-n + 10) {
   margin-bottom: 1%;
 }
 
-.role select{
+.role select {
   font-size: 2rem;
   padding: 5px 5px;
   border: none;
   cursor: pointer;
 }
 
-select {
+label {
   font: 14px/24px 'Source Code Pro';
   background-color: transparent;
   color: white;
 }
 
+select {
+  font: 20px/30px 'Source Code Pro';
+  background-color: transparent;
+  color: white;
+}
+
 select option {
-  background-color: #333; 
-  color: white;           
+  background-color: #333;
+  color: white;
 }
 
 .radio-level {
@@ -289,9 +279,17 @@ select option {
   margin-top: 5%;
 }
 
+.talenty {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
 .surky,
 .byliny {
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 .xpgold label,
@@ -300,6 +298,11 @@ select option {
   display: flex;
   align-items: center;
   margin-right: 5%;
+}
+
+.talenty label {
+  display: flex;
+  margin: 0 2% 0 2%;
 }
 
 .xpgold label input,
