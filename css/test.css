@@ -231,6 +231,14 @@ tbody tr:nth-child(even) {
   background: #292929;
 }
 
+tr:first-child td:nth-child(n + 2):nth-child(-n + 10):hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+td.selected:nth-child(n + 2):nth-child(-n + 10) {
+  background-color: rgba(243, 255, 71, 0.37);
+}
 /*
   ========================================
   Dropdown Radio Textarea
@@ -321,7 +329,6 @@ select {
   height: 35px;
 }
 
-.byliny img{
+.byliny img {
   height: 25px;
 }
-
