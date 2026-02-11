@@ -202,12 +202,7 @@ header img {
 .avatar img {
   max-width: 100%;
   height: auto;
-  border-radius: 50%;
-  clip-path: inset(0 0 10% 0);
-}
-
-footer {
-  margin-bottom: 0;
+  border-radius: 10%;
 }
 
 /*
@@ -253,10 +248,22 @@ td.selected:nth-child(n + 2):nth-child(-n + 10) {
   margin-bottom: 1%;
 }
 
+.role select{
+  font-size: 2rem;
+  padding: 5px 5px;
+  border: none;
+  cursor: pointer;
+}
+
 select {
   font: 14px/24px 'Source Code Pro';
   background-color: transparent;
   color: white;
+}
+
+select option {
+  background-color: #333; 
+  color: white;           
 }
 
 .radio-level {
