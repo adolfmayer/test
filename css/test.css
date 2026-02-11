@@ -203,7 +203,7 @@ header img {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
-  clip-path: inset(5% 0 8% 0);
+  clip-path: inset(0 0 10% 0);
 }
 
 footer {
@@ -219,7 +219,7 @@ footer {
 table {
   border-collapse: collapse;
   color: #ffffff;
-  text-align: center; 
+  text-align: center;
 }
 
 td {
@@ -249,7 +249,7 @@ select {
   color: white;
 }
 
-.radio-level{
+.radio-level {
   display: flex;
   justify-content: flex-end;
   margin-right: 18px;
@@ -260,23 +260,34 @@ select {
   margin-right: 23px;
 }
 
-.radio-level label:nth-child(n+3):nth-child(-n+8) {
+.radio-level label:nth-child(n + 3):nth-child(-n + 8) {
   margin-right: 35px;
 }
 
-.surky{
+.xpgold,
+.surky,
+.byliny {
   display: flex;
   justify-content: center;
   margin-top: 5%;
 }
 
-.surky label {
-  display: flex;           
-  align-items: center;
-  margin-right: 5%;     
+.surky,
+.byliny {
+  margin-top: 2%;
 }
 
-.surky label input{
+.xpgold label,
+.surky label,
+.byliny label {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.xpgold label input,
+.surky label input,
+.byliny label input {
   font: 14px/24px 'Source Code Pro';
   background-color: transparent;
   color: white;
@@ -285,8 +296,8 @@ select {
 }
 
 .short-input {
-    width: 32px; 
-  }
+  width: 32px;
+}
 
 /*
   ========================================
@@ -294,7 +305,23 @@ select {
   ========================================
 */
 
-.surky img {
-  height: 60px;
+.xpgold img,
+.surky img,
+.byliny img {
+  filter: invert(100%);
   width: auto;
 }
+
+.xpgold img {
+  height: 60px;
+}
+
+.surky img,
+.byliny img {
+  height: 35px;
+}
+
+.byliny img{
+  height: 25px;
+}
+
