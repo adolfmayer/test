@@ -203,6 +203,7 @@ header img {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
+  clip-path: inset(5% 0 8% 0);
 }
 
 .role {
