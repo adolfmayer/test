@@ -2,36 +2,77 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM ready');
 
   /* ===============================
-     INPUTY / SELECTY / TEXTAREA
+     PAGE NAMESPACE (KLÍČOVÁ VĚC)
      =============================== */
+  const PAGE_KEY = location.pathname.split('/').pop(); 
+  const ns = (key) => `${PAGE_KEY}:${key}`;
 
+  /* ===============================
+     ROLE SELECT (PŘEPÍNÁNÍ STRÁNEK)
+     =============================== */
+  const roleSelect = document.querySelector('select[name="role"]');
+
+  if (roleSelect) {
+    const ROLE_KEY = 'selected-role';
+    const savedRole = localStorage.getItem(ROLE_KEY);
+
+    if (savedRole) {
+      roleSelect.value = savedRole;
+    }
+
+    roleSelect.addEventListener('change', () => {
+      const value = roleSelect.value;
+      localStorage.setItem(ROLE_KEY, value);
+
+      if (!location.pathname.endsWith(value)) {
+        location.href = value;
+      }
+    });
+  }
+
+  /* ===============================
+     CHECKBOXY – PAMĚŤ PO STRÁNKÁCH
+     =============================== */
+  document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+    const key =
+      checkbox.id ||
+      `${checkbox.name}-${checkbox.value}`;
+
+    const saved = localStorage.getItem(ns(key));
+
+    if (saved !== null) {
+      checkbox.checked = saved === 'true';
+    }
+
+    checkbox.addEventListener('change', () => {
+      localStorage.setItem(ns(key), checkbox.checked);
+    });
+  });
+
+  /* ===============================
+     OSTATNÍ INPUTY / SELECTY / TEXTAREA
+     =============================== */
   document
-    .querySelectorAll('input:not([type="radio"]), select, textarea')
+    .querySelectorAll(
+      'input:not([type="radio"]):not([type="checkbox"]), select:not([name="role"]), textarea'
+    )
     .forEach((el) => {
-      const saved = localStorage.getItem(el.name);
+      const saved = localStorage.getItem(ns(el.name));
+
       if (saved !== null) {
-        if (el.type === 'checkbox') {
-          el.checked = saved === 'true';
-        } else {
-          el.value = saved;
-        }
+        el.value = saved;
       }
 
       el.addEventListener('change', () => {
-        if (el.type === 'checkbox') {
-          localStorage.setItem(el.name, el.checked);
-        } else {
-          localStorage.setItem(el.name, el.value);
-        }
+        localStorage.setItem(ns(el.name), el.value);
       });
     });
 
   /* ===============================
-     RADIO BUTTONY
+     RADIO BUTTONY – PAMĚŤ PO STRÁNKÁCH
      =============================== */
-
   document.querySelectorAll('input[type="radio"]').forEach((radio) => {
-    const saved = localStorage.getItem(radio.name);
+    const saved = localStorage.getItem(ns(radio.name));
 
     if (saved === radio.value) {
       radio.checked = true;
@@ -39,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     radio.addEventListener('change', () => {
       if (radio.checked) {
-        localStorage.setItem(radio.name, radio.value);
+        localStorage.setItem(ns(radio.name), radio.value);
       }
     });
   });
@@ -47,26 +88,26 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===============================
      TABULKA – JEDNA VYBRANÁ BUŇKA
      =============================== */
-
-  const SELECTED_TD_KEY = 'selected-td';
+  const SELECTED_TD_KEY = ns('selected-td');
   const savedTdId = localStorage.getItem(SELECTED_TD_KEY);
 
-  document.querySelectorAll('td').forEach(td => {
+  document.querySelectorAll('td').forEach((td) => {
     const id = td.dataset.id;
     if (!id) return;
 
-    // obnova po refreshi
     if (id === savedTdId) {
       td.classList.add('selected');
     }
 
-    // klik na buňku
     td.addEventListener('click', () => {
-      document.querySelectorAll('td.selected')
-        .forEach(el => el.classList.remove('selected'));
+      document
+        .querySelectorAll('td.selected')
+        .forEach((el) => el.classList.remove('selected'));
 
       td.classList.add('selected');
       localStorage.setItem(SELECTED_TD_KEY, id);
     });
   });
 });
+
+
