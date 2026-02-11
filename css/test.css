@@ -199,17 +199,11 @@ header img {
   margin: 0 auto;
 }
 
-.container img {
+.avatar img {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
   clip-path: inset(5% 0 8% 0);
-}
-
-.role {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 1%;
 }
 
 footer {
@@ -243,9 +237,15 @@ tbody tr:nth-child(even) {
   ========================================
 */
 
+.role {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1%;
+}
+
 select {
   font: 14px/24px 'Source Code Pro';
-  background-color: black;
+  background-color: transparent;
   color: white;
 }
 
@@ -262,4 +262,39 @@ select {
 
 .radio-level label:nth-child(n+3):nth-child(-n+8) {
   margin-right: 35px;
+}
+
+.surky{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.surky label {
+  display: flex;           
+  align-items: center;
+  margin-right: 5%;     
+}
+
+.surky label input{
+  font: 14px/24px 'Source Code Pro';
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  margin-left: 10%;
+}
+
+.short-input {
+    width: 32px; 
+  }
+
+/*
+  ========================================
+  Surky images
+  ========================================
+*/
+
+.surky img {
+  height: 60px;
+  width: auto;
 }
