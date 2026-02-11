@@ -231,9 +231,11 @@ tbody tr:nth-child(even) {
   background: #292929;
 }
 
-tr:first-child td:nth-child(n + 2):nth-child(-n + 10):hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  tr:first-child td:nth-child(n + 2):nth-child(-n + 10):hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+  }
 }
 
 td.selected:nth-child(n + 2):nth-child(-n + 10) {
