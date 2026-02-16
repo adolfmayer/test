@@ -141,22 +141,21 @@ body {
   margin: 0;
 }
 
-body[data-page="index"] {
+body[data-page='index'] {
   background: linear-gradient(black, #313d5c);
 }
 
-body[data-page="krab"] {
+body[data-page='krab'] {
   background: linear-gradient(black, #926385);
 }
 
-body[data-page="meteor"] {
+body[data-page='meteor'] {
   background: linear-gradient(black, #801818);
 }
 
-body[data-page="stin"] {
+body[data-page='stin'] {
   background: linear-gradient(black, #4b4b4b);
 }
-
 
 p {
   color: #fff;
@@ -188,6 +187,10 @@ header img {
   margin-top: 2%;
 }
 
+div {
+  color: #ffffff;
+}
+
 .container {
   display: flex;
   gap: 2%;
@@ -200,6 +203,10 @@ header img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 10%;
+}
+
+.third {
+  margin-top: 1%;
 }
 
 /*
@@ -332,12 +339,21 @@ select option {
   width: 45px;
 }
 
+.no-gap-left {
+  margin-left: 0;
+}
+
+.no-gap-right {
+  margin-right: 0;
+}
+
 /*
   ========================================
   Surky images
   ========================================
 */
 
+.third img,
 .xpgold img,
 .surky img,
 .byliny img {
@@ -356,4 +372,10 @@ select option {
 
 .byliny img {
   height: 25px;
+}
+
+.icon {
+  height: 1.5em;
+  width: 1em;
+  vertical-align: middle;
 }
