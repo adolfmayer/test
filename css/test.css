@@ -137,23 +137,31 @@ table {
 
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
 }
 
 body[data-page='index'] {
+  background: -webkit-linear-gradient(black, #313d5c);
+  background: -moz-linear-gradient(black, #313d5c);
   background: linear-gradient(black, #313d5c);
 }
 
 body[data-page='krab'] {
+  background: -webkit-linear-gradient(black, #926385);
+  background: -moz-linear-gradient(black, #926385);
   background: linear-gradient(black, #926385);
 }
 
 body[data-page='meteor'] {
+  background: -webkit-linear-gradient(black, #801818);
+  background: -moz-linear-gradient(black, #801818);
   background: linear-gradient(black, #801818);
 }
 
 body[data-page='stin'] {
+  background: -webkit-linear-gradient(black, #4b4b4b);
+  background: -moz-linear-gradient(black, #4b4b4b);
   background: linear-gradient(black, #4b4b4b);
 }
 
